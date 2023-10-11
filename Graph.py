@@ -123,7 +123,7 @@ class Graph:
             G = nx.MultiDiGraph()
             G = nx.from_numpy_array(np.array(self.__adjacency_matrix), create_using=nx.MultiDiGraph())
             
-            pos = nx.circular_layout(G)
+            pos = nx.random_layout(G)
             nx.draw(G, 
                     pos,
                     with_labels=True, 
@@ -141,7 +141,7 @@ class Graph:
         else:
             G = nx.Graph()
             G = nx.from_numpy_array(np.array(self.__adjacency_matrix))
-            pos = nx.circular_layout(G)
+            pos = nx.random_layout(G)
             nx.draw(G, 
                     pos,
                     with_labels=True, 
